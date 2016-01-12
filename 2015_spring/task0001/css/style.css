@@ -8,11 +8,35 @@
     padding: 0;
 }
 
+html,
+body {
+	min-width: 980px;
+	font: 12px/1.5 arial, sans-serif ;
+	background: #e2e2e2;
+}
+
+ul li {
+    list-style: none;
+}
+
+header,
+footer,
+nav,
+figure,
+section,
+figcaption {
+    display: block;
+}
+
 input[type="submit"], 
 input[type="reset"], 
 input[type="button"], 
 button { 
     -webkit-appearance: none; 
+}
+
+img {
+    border: none;
 }
 
 .clearfix:before,
@@ -57,17 +81,6 @@ button {
 	width: 24%;
 }
 
-
-ul li {
-    list-style: none;
-}
-
-html,
-body {
-	min-width: 980px;
-	font: 12px/1.5 arial, sans-serif;
-	background: #e2e2e2;
-}
 
 /* header */
 
@@ -254,6 +267,7 @@ body {
 	width: 380px;
 	padding: 10px 10px 30px;
 	background: rgba(255, 255, 255, .2);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33ffffff,endColorstr=#33ffffff);
 	overflow: hidden;
 	color: #fff;
 	font-family: "宋体";
@@ -286,14 +300,14 @@ body {
 
 	float: left;
     width: 320px;
-    margin-right: 10px;
     padding-bottom: 50000px;
     margin-bottom: -50000px;
     background: #fff;
 }
 
-.index-page .img-gallery .img-wrapper:last-child {
-    margin-right: 0;
+/*IE8 last-child selector not support*/
+.index-page .img-gallery .img-wrapper+.img-wrapper {
+    margin-left: 10px;
 }
 
 .img-gallery .img-wrapper .img {
@@ -328,6 +342,7 @@ body {
 	width: 160px;
 	height: 160px;
 	border-radius: 80px;
+    behavior: url(css/ie-css3.htc);
 }
 
 .index-page .station-master .thumbnail .name-wrapper {
@@ -379,12 +394,14 @@ body {
 	*display: inline;
     padding: 6px;
     border-radius: 50%;
+    behavior: url(css/ie-css3.htc);
     background: #e2e2e2;
     overflow: hidden;
 }
 
 .about-page .thumbnail-wrapper .img {
 	border-radius: 50%;
+	behavior: url(css/ie-css3.htc);
 }
 
 .about-page .station-master,
@@ -445,6 +462,7 @@ body {
 	padding: 4px 14px;
 	margin-right: 20px;
 	border-radius: 8px;
+	behavior: url(css/ie-css3.htc);
 	border: 4px solid #e2e2e2;
 	background: #fff;
 }
@@ -584,6 +602,7 @@ body {
 .search-form .submit-input {
 	display: block;
 	height: 40px;
+	line-height: 40px;
 	outline: none;
 }
 
@@ -839,6 +858,7 @@ body {
 	height: 30px;
 	border: 1px solid #fff;
 	border-radius: 15px;
+	behavior: url(css/ie-css3.htc);
 	font-style: normal;
 	color: #fff;
 	text-align: center;
@@ -928,6 +948,7 @@ body {
 	margin-right: 10px;
 	text-align: center;
 	border-radius: 50%;
+	behavior: url(css/ie-css3.htc);
 	color: #fff;
 	background: #522A5C;
 }

@@ -47,7 +47,7 @@ _.cloneObject = function(src){
 
 	if(_.isObject(src) || _.isArray(src) || _.isDate(src)){
 		if(_.isDate(src)){
-			target = new Date(src.getTime());
+			target = new Date(+src);
 
 		}else if(_.isArray(src)){
 			target = [];
@@ -106,11 +106,11 @@ _.getObjectLength = function(obj){
 };
 
 _.isEmail = function(emailStr){
-
+	return /^([\s\S])+@([\s\S])+\.([\s\S])+$/.test(emailStr);
 };
 
 _.isMobilePhone = function(phone){
-
+	return /^1\d{10}/.test(phone);
 };
 
 
